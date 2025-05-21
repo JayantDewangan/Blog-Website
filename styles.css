@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(249, 246, 244);
+}
+
+.container{
+    max-width: 66vw;
+    padding: 2rem 1rem;
+    /* top, bottom : 2rem and right, left : 1rem */
+    margin: 0 auto;
+}
+
+.header-container{
+    margin-bottom: 2.8rem;
+}
+
+.header-title h1{
+    font-family: "Bodoni Moda", serif;
+    font-size: 80px;
+    font-weight: 100;
+    text-shadow: 1px 1px 2px black;
+    word-spacing: 30px;
+    text-align: center;
+}
+
+.logo-image{
+    cursor: pointer;
+    width: 150px;
+    height: 130px;
+    transition: all 1.5s ease;
+}
+
+.logo-image:hover{
+    transform: scale(-2);
+    transform: rotate(360deg);
+}
+
+.heading-logo{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-title p{
+    max-width: 568px;
+    margin: 0 auto;
+    text-align:center;
+    color: rgb(119, 116, 116);
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 4px;
+}
+
+.unordered-list{
+    margin-top: 4rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+}
+
+.header-container .unordered-list li a{
+    text-decoration: none;
+    color: rgb(133, 66, 66);
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.header-container .unordered-list li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: rgb(147, 86, 86);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s linear ;
+}
+
+.header-container .unordered-list li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.main-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3,1FR);
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.card-container .card-image-container{
+    position: relative;
+    overflow: hidden;
+    height: 14rem;
+}
+
+.card-container .card-image-container .card-image{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* 
+    - object-fit: cover; makes sure the image covers the entire container without stretching.
+    - object-position: center; keeps the focus in the middle of the image.
+    - position: absolute; allows precise positioning within the .card-image-container.
+    - height: 100%; width: 100%; ensures the image takes up the full container dimensions.
+    */
+}
+
+.card-container:hover .card-image{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+
+.card-title-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.card-title-container a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 0.4rem;
+    color: rgb(25,23,23);
+}
+
+.card-title-container a:hover{
+    color: blueviolet;
+}
+
+.card-desc{
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(113, 107, 107);
+    font-size: 0.85rem;
+}
+
+.card-footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-items: flex-end;
+}
+
+.author-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(118, 116, 116);
+    background-color: rgb(224, 224, 224);
+    border-radius: 50%;
+}
+
+.aurthor-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.aurthor-details span:nth-child(1){
+    color: rgb(89, 89, 234);
+}
+
+.aurthor-details span:nth-child(2){
+    color: grey;
+}
+
+.card-tag-container{
+    border: 1px solid rgb(195, 190, 190);
+    border-radius: 4px;
+    line-height: 1.3rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.card-tag-container span{
+    color: rgb(215, 192, 62);
+    font-size: 0.79rem;
+}
+
+.footer{
+    margin-top: 30px;
+    padding: 70px;
+    background-color: rgb(103, 100, 100);
+    border-radius: 10px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    font-family:'Poppins', sans-serif;
+    color: #ffffff;
+    margin-bottom: 35px;
+    position: relative;
+    font-weight: 500;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e9871e;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+/* This CSS code adds a decorative underline effect to <h4> elements inside the .footer-col class.
+Breakdown:
+- content: ''; → Generates an empty pseudo-element (::before).
+- position: absolute; → Positions the element relative to its nearest positioned ancestor.
+- left: 0; → Aligns it to the left.
+- bottom: -10px; → Places it 10 pixels below the heading.
+- background-color: #e91e63; → Sets the underline color (Pinkish-red).
+- height: 2px; → Defines the thickness of the underline.
+- width: 50px; → Creates a short underline effect instead of stretching across the text. */
+
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+/* 
+This CSS rule adds spacing between list items (<li>) inside an unordered list (<ul>) within the .footer-col class—except for the last item.
+Breakdown:
+- .footer-col ul li → Targets list items inside .footer-col.
+- :not(:last-child) → Ensures the rule does not apply to the last list item.
+- margin-bottom: 10px; → Adds 10px of spacing below each list item.
+
+*/
+
+
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    /* capitalizes the first letter */
+    text-decoration: none;
+    color: rgb(177, 194, 137) ;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    transform: translateX(8px);
+}
+
+.footer-col .social-media-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-media-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+    position: relative;
+    transform: translateY(-8px);
+}
+
+@media(width <= 1526px){
+    .main-container{
+        grid-template-columns: repeat(2,1FR);
+    }
+
+    .header-title h1{
+        font-size: 60px;
+    }
+    
+    .logo-image{
+        width: 130px;
+        height: 110px;
+    }
+
+    .header-title p{
+        max-width: 400px;
+        font-size: 0.8rem;
+    }
+
+    .header-container .unordered-list li a{
+        color: rgb(133, 66, 66);
+        font-size: 1rem;
+    }
+    .header-title h1{
+        word-spacing: 20px;
+    }
+    
+    .container{
+        max-width: 75vw;
+        padding: 2rem 1rem;
+        /* top, bottom : 2rem and right, left : 1rem */
+        margin: 0 auto;
+    }
+
+
+}
+
+@media(width <= 992px){
+    .main-container{
+        grid-template-columns: repeat(1,1FR);
+    }
+
+    .card-container{
+        margin-bottom: 1.4rem;
+    }
+
+    .header-title h1{
+        word-spacing: 10px;
+    }
+
+    .unordered-list{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem;
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+    }
+
+}
+
+@media(width <=911px){
+    .heading-logo{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .header-title h1{
+    font-size: 40px;
+    word-spacing: 10px;
+    }
+
+    .logo-image{
+        width: 80px;
+        height: 60px;
+    }
+
+    .header-title p{
+        max-width: 250px;
+        font-size: 0.7rem;
+    }
+
+    .header-container .unordered-list li a{
+        color: rgb(133, 66, 66);
+        font-size: 0.85rem;
+    }
+
+    .container{
+        max-width: 75vw;
+        padding: 2rem 1rem;
+        /* top, bottom : 2rem and right, left : 1rem */
+        margin: 0 auto;
+    }
+}
+
+@media(width <= 885px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    #nav-lists{
+        flex-direction: column;
+    }
+    #nav-lists li p{
+        margin-bottom: 40px;
+    }
+}
+
+@media(width <= 650px){
+    .row{
+        flex-direction: column;
+    }
+    .for-detailing{
+        gap: 18px;
+        font-size: 1rem;
+    }
+    #nav-lists li p{
+        font-size: 2rem;
+    }
+}
+
+@media(width <=420px){
+    .for-detailing{
+        flex-direction: column;
+    }
+}
+
+@media(width<=537px){
+    .heading-logo{
+        gap: 5px;
+    }
+    
+    .header-title h1{
+    font-size: 20px;
+    word-spacing: 10px;
+    }
+
+    .logo-image{
+        width: 60px;
+        height: 40px;
+    }
+
+    .header-title p{
+        max-width: 150px;
+        font-size: 0.5rem;
+    }
+
+    .header-container .unordered-list li a{
+        color: rgb(133, 66, 66);
+        font-size: 0.85rem;
+
+    }
+
+    .container{
+        max-width: 75vw;
+        padding: 2rem 1rem;
+        /* top, bottom : 2rem and right, left : 1rem */
+        margin: 0 auto;
+    }
+}
